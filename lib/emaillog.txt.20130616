@@ -1,0 +1,23 @@
+# Logfile created on 2013-06-16 00:07:31 +0700 by logger.rb/31641
+I, [2013-06-16T00:07:31.964000 #5156]  INFO -- : received: {"to":"giangthanh9494@gmail.com","token":"f0a313ca79fb3c327aa55ca14f5864df","reason":"register"} on /topic/hpumail
+I, [2013-06-16T00:07:31.968000 #5156]  INFO -- : sending email to giangthanh9494@gmail.com with token f0a313ca79fb3c327aa55ca14f5864df with reason register
+I, [2013-06-16T07:45:44.762000 #5156]  INFO -- : received: {"to":"hiding1love@gmail.com","token":"25d4e8bb67e42eae6ffa6da02ec3b7d5","reason":"register"} on /topic/hpumail
+I, [2013-06-16T07:45:44.763000 #5156]  INFO -- : sending email to hiding1love@gmail.com with token 25d4e8bb67e42eae6ffa6da02ec3b7d5 with reason register
+I, [2013-06-16T07:52:38.849000 #5156]  INFO -- : received: {"to":"votaidanh@yahoo.com","token":"a25ec135620b755880231358639ef29d","reason":"register"} on /topic/hpumail
+I, [2013-06-16T07:52:38.849000 #5156]  INFO -- : sending email to votaidanh@yahoo.com with token a25ec135620b755880231358639ef29d with reason register
+I, [2013-06-16T12:55:33.980000 #5156]  INFO -- : received: {"to":"hongtuyet2208@gmail.com","token":"2be2a9eef071020105dbb9b38b8c7148","reason":"register"} on /topic/hpumail
+I, [2013-06-16T12:55:33.980000 #5156]  INFO -- : sending email to hongtuyet2208@gmail.com with token 2be2a9eef071020105dbb9b38b8c7148 with reason register
+I, [2013-06-16T12:58:06.794000 #5156]  INFO -- : received: {"to":"hongtuyet2208@gmail.com","token":"Z62XTXQ9","reason":"reset"} on /topic/hpumail
+I, [2013-06-16T12:58:06.795000 #5156]  INFO -- : sending email to hongtuyet2208@gmail.com with token Z62XTXQ9 with reason reset
+I, [2013-06-16T13:06:43.922000 #5156]  INFO -- : received: {"to":"diepvien2591989@gmail.com","token":"775c53dcda98fe76c39d2401ad3eb4a7","reason":"register"} on /topic/hpumail
+I, [2013-06-16T13:06:43.923000 #5156]  INFO -- : sending email to diepvien2591989@gmail.com with token 775c53dcda98fe76c39d2401ad3eb4a7 with reason register
+I, [2013-06-16T13:37:59.575000 #5156]  INFO -- : received: {"to":"lolemsitinh_0301@yahoo.com","token":"20e32d7655c86ea75dad563052a20d6c","reason":"register"} on /topic/hpumail
+I, [2013-06-16T13:37:59.576000 #5156]  INFO -- : sending email to lolemsitinh_0301@yahoo.com with token 20e32d7655c86ea75dad563052a20d6c with reason register
+I, [2013-06-16T17:16:55.198000 #5156]  INFO -- : received: {"to":"kikodoragon@gmail.com","token":"3c221e75aea318fd1a50475ccc16c1f5","reason":"register"} on /topic/hpumail
+I, [2013-06-16T17:16:55.198000 #5156]  INFO -- : sending email to kikodoragon@gmail.com with token 3c221e75aea318fd1a50475ccc16c1f5 with reason register
+I, [2013-06-16T17:34:48.014000 #5156]  INFO -- : received: {"to":"dattuan_n@yahoo.com","token":"5b449a2ca9e8c5712199bee0e584ea71","reason":"register"} on /topic/hpumail
+I, [2013-06-16T17:34:48.014000 #5156]  INFO -- : sending email to dattuan_n@yahoo.com with token 5b449a2ca9e8c5712199bee0e584ea71 with reason register
+I, [2013-06-16T19:01:21.703000 #5156]  INFO -- : received: {"to":"vietxaydung86@gmail.com","token":"0c66b5fb15dc7c2a4150752b0fc5c7bf","reason":"register"} on /topic/hpumail
+I, [2013-06-16T19:01:21.703000 #5156]  INFO -- : sending email to vietxaydung86@gmail.com with token 0c66b5fb15dc7c2a4150752b0fc5c7bf with reason register
+I, [2013-06-16T22:07:28.292000 #5156]  INFO -- : received: {"to":"tutruc2000@yahoo.com","token":"9e57bc4694682be7e0dd771c29fe1d7d","reason":"register"} on /topic/hpumail
+I, [2013-06-16T22:07:28.293000 #5156]  INFO -- : sending email to tutruc2000@yahoo.com with token 9e57bc4694682be7e0dd771c29fe1d7d with reason register

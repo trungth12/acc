@@ -1,0 +1,252 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <title>HPU Central Authentication Service</title>
+  <!-- Modernizr -->
+  <script src="/js/libs/modernizr-2.6.2.min.js"></script>
+  <!-- jQuery -->
+  <script type="text/javascript" src="/js/libs/jquery-1.8.2.min.js"></script>
+  <script type="text/javascript" src="/js/jquery-ui.js"></script>
+  <!-- GroundworkCSS -->
+  <link type="text/css" rel="stylesheet" href="/css/groundwork.css">
+  <link type="text/css" rel="stylesheet" href="/css/jquery-ui.css">
+  
+  <!--[if IE]>
+  <link type="text/css" rel="stylesheet" href="./css/groundwork-ie.css">
+  <![endif]-->
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="./js/libs/html5shiv.min.js"></script>
+  <![endif]-->
+  <!--[if IE 7]>
+  <link type="text/css" rel="stylesheet" href="./css/font-awesome-ie7.min.css">
+  <![endif]-->
+  <script type="text/javascript">
+    // fallback if SVG unsupported
+    Modernizr.load({
+      test: Modernizr.svg,
+      nope: '/css/no-svg.css'
+    });
+    // polyfill for HTML5 placeholders
+    Modernizr.load({
+      test: Modernizr.input.placeholder,
+      nope: [
+        '/css/placeholder_polyfill.css',
+        '/js/libs/placeholder_polyfill.jquery.js'
+      ]
+    });
+  </script>
+  
+</head>
+<body>
+      
+    <div class="container">
+      <div class="row">
+        <div class="one half">
+          <h1 class="big responsive heading" data-compression="9" data-min="20" data-max="120" style="font-size: 66px;"><a href="/"><span class="logo"></span></a></h1>
+        </div>
+        <div class="one half double pad-top">
+          <nav class="inline pull-right">
+              <ul>                                    
+                  
+                    <% if !logged_in?(request, session) then %>
+                      <li><a class="menu small-tablet" title="Đăng nhập" href="<%= login_url %>"><i class="icon-home" ></i>Đăng nhập</a></li>            
+                      <li><a class="menu small-tablet" title="Đăng ký" id="register-menu"><i class="icon-home" ></i>Đăng ký</a></li>            
+            <li><a  class="menu small-tablet" title="Quên mật khẩu" id="pw-menu"><i class="icon-envelope-alt" ></i>Quên mật khẩu ? </a></li>            
+                      <% else %>
+                        <li><a class="menu small-tablet" href="/logout"><i class="icon-home" ></i>Đăng xuất</a></li>            
+                      <% end %>                              
+                    
+              </ul>
+          </nav>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="container">
+      <div class="row">
+      <% flash_types.select{ |kind| flash.has?(kind) }.each do |kind| %>
+            <div class="flash <%= kind %>">
+              <%= flash[kind] %>
+            </div>
+            <% end %> 
+      </div>
+      <div class="row">
+        <div class="tabs two thirds padded">
+          <ul>
+            <li><a href="#services" class="active">Dịch vụ</a></li>
+            <li><a href="#profile">Hồ sơ</a></li>
+            <li><a class="" href="#password">Mật khẩu</a></li>            
+          </ul>
+          <div id="services" class="active">
+            <div class="container">    
+			<% if current_user and current_user.status == 0 then  %>
+			<div class="row">
+			<div class="two thirds padded">
+				<p>Tài khoản của bạn chưa kích hoạt. Để kích hoạt tài khoản, bạn vui lòng vào phần hồ sơ gởi lại email xác thực.</p>
+				
+			</div>
+			</div>
+			<% end %>
+    <div class="row">
+      <div class="two thirds">
+          <div class="padded">      
+                <article class="row">
+                <section class="one third padded">       
+                  <a href="http://hpu.edu.vn"><img src="/images/congthongtin.jpg"  alt="" /></a>
+                </section>      
+                <section class="one third padded">       
+                  <a href="http://libol.hpu.edu.vn"><img src="/images/tracuuthongtin.jpg"  alt="" /></a>    </section>
+                <section class="one third padded">       
+                  <a href="http://qlgd.hpu.edu.vn"><img src="/images/diendansinhvien.jpg"  alt="" /></a>
+                </section>
+                <section class="one third padded">       
+                  <a href="http://dk.hpu.edu.vn"><img src="/images/dangkymonhoc.jpg"  alt="" /></a>
+                </section>
+                <section class="one third padded">       
+                  <a href="http://tailieu.hpu.edu.vn"><img src="/images/decuongmonhoc.jpg"  alt="" /></a>
+                </section>
+                <section class="one third padded">       
+                  <a href="http://img.hpu.edu.vn"><img src="/images/thuvienanh.jpg"  alt="" /></a>
+                </section>
+                <section class="one third padded">       
+                  <a href="http://vp.hpu.edu.vn"><img src="/images/hotrotructuyen.jpg"  alt="" /></a>
+                </section>
+                <section class="one third padded">       
+                  <a href="http://lib.hpu.edu.vn"><img src="/images/khoaluandoan.jpg"  alt="" /></a>
+                </section>
+                <section class="one third padded">       
+                  <a href="https://www.facebook.com/groups/SinhVienHPU/"><img src="/images/hpu_facebook.jpg"  alt="" /></a>
+                </section>
+              </article>              
+          </div>
+      </div>   
+      <div class="one third" >
+          <div class="padded">
+
+          </div>
+      </div>         
+    </div>
+          </div>
+          </div>
+          <div id="profile">
+            <h1>Profile</h1>            
+            <% if current_user and current_user.status == 0 then  %>
+        <form action="/reconfirm" method="post">
+          <fieldset>
+            <div class="row">
+              <div class="one whole padded">
+                <button type="submit">Gởi lại email xác thực</button> 
+              </div>
+            </div>  
+          </fieldset>
+        </form>
+        <% end %>
+		<% if current_user then %>
+        <form action="/" method="post" >        
+          <fieldset>   
+            <div class="row">
+              <div class="one whole padded">
+                <label for="email">Địa chỉ email (dùng để đăng nhập)</label>
+                <input type="email" value="<%= current_user[:email] %>" id="email" readonly />
+              </div>
+            </div>           
+            <div class="row">
+              <div class="one whole padded">
+                <label for="pemail">Địa chỉ email liên lạc:</label>
+                <input type="email" name="profile[contact]" value="<%= current_user[:contact] %>" id="pemail" />
+              </div>
+            </div>            
+            <div class="row">
+              <div class="one whole padded">
+                <label for="fullname">Họ và tên:</label>
+                <input type="text" name="profile[hovaten]" value="<%= current_user[:hovaten] %>" id="fullname" />
+              </div>
+            </div>
+            <div class="row">
+             <div class="one whole padded">        
+				<label for="gioitinh">Giới tính:</label>
+                <select name="profile[gioitinh]" id="gioitinh" >                                      
+                  <option value="1" <%= 'selected' if current_user[:gioitinh] == '1' %> >Nam</option>
+                  <option value="0" <%= 'selected' if current_user[:gioitinh] == '0' %> >Nữ</option>                                        
+                </select>                
+             </div>
+            </div>
+			
+            <div class="row">
+              <div class="one whole padded">
+                  <label for="datepicker">Ngày sinh (ngày/tháng/năm):</label>
+                  <input type="text" id="datepicker" 
+                  value="<%= current_user[:ngaysinh].strftime('%d/%m/%Y') if current_user[:ngaysinh] %>" placeholder="dd/mm/yyyy" name="profile[ngaysinh]" /></p>
+                </div>
+              </div>            
+            <div class="row">
+              <div class="one whole padded">
+                <label for="address">Địa chỉ:</label>
+                <input type="text" name="profile[diachi]" value="<%= current_user[:diachi] %>" placeholder="Địa chỉ" id="address">
+              </div>
+            </div>                        
+           
+           <div class="row">
+              <div class="one whole padded">
+                <label for="phone">Số điện thoại:</label>
+                <input type="text" name="profile[dienthoai]" placeholder="Số điện thoại" value="<%= current_user[:dienthoai] %>" id="phone">
+              </div>
+            </div> 
+          
+            <div class="row">
+              <div class="one whole padded">
+                <button type="submit">Cập nhật</button> 
+              </div>
+            </div>                       
+          </fieldset>
+         <% end %>
+        </form>
+          </div>
+          <div class="" id="password">
+            <h1>Đổi mật khẩu</h1>               
+          <form action="/changepassword" method="post" >
+            <fieldset>
+            <div class="row">
+              <div class="one whole padded">
+                <label for="oldpassword">Mật khẩu cũ:</label>
+                <input type="password" name="user[oldpassword]" placeholder="Mật khẩu cũ của bạn" id="oldpassword" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="one whole padded">
+                <label for="password">Mật khẩu mới:</label>
+                <input type="password" name="user[password]" placeholder="Mật khẩu mới" id="password" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="one whole padded">
+                <label for="password2">Nhập lại mật khẩu mới:</label>
+                <input type="password" name="user[password2]" placeholder="Xác nhận mật khẩu mới" id="password2" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="one whole padded">
+                <button type="submit">Cập nhật mật khẩu</button> 
+              </div>
+            </div>                       
+          </fieldset>
+        </form>
+          </div> 
+        </div>                       
+      </div>
+    
+    </div>
+
+    <!-- scripts -->
+  <script type="text/javascript" src="/js/plugins/jquery.orbit-1.4.0.js"></script>
+  <script type="text/javascript" src="/js/groundwork.js"></script>
+  <script type="text/javascript" src="/js/mustache.js"></script>
+  
+</body>
