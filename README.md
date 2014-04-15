@@ -1,3 +1,6 @@
-# Rubycas Client Sinatra Example
-
-A working example that uses the CAS Client library to provide authentication for a sinatra app.
+1. Cài đặt hệ thống:
+  - Cài Ruby và DevKit
+  - Cài PostgreSQL
+  - Cài rubycas-server
+  
+2. Vận hành hệ thống:
